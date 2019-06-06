@@ -1,6 +1,8 @@
 import React, { Fragment } from 'react'
 
-const FillingForm = (props) => {
+//const FillingForm = (props) => {
+class FillingForm extends React.Component {
+  render() {
   return (
     <Fragment>
       <h1><label htmlFor="fillings">Fillings</label></h1>
@@ -13,7 +15,7 @@ const FillingForm = (props) => {
               value="White Rice"
               name="fillings"
               checked={ this.props.fillings.includes('White Rice') }
-              onChange={ this.props.handleChange }
+              onChange={ this.props.handleOnChange }
             />
             <img src={ require('../images/fillings/white-rice.png') } height="100px" width="100px" alt="white rice" />
             <label htmlFor="white-rice">White Rice</label>
@@ -28,7 +30,7 @@ const FillingForm = (props) => {
               value="Brown Rice"
               name="fillings"
               checked={ this.props.fillings.includes('Brown Rice') }
-              onChange={ this.props.handleChange }
+              onChange={ this.props.handleOnChange }
             />
             <img src={ require('../images/fillings/brown-rice.png') } height="100px" width="100px" alt="brown rice" />
             <label htmlFor="brown-rice">Brown Rice</label>
@@ -43,7 +45,7 @@ const FillingForm = (props) => {
               value="Black Beans"
               name="fillings"
               checked={ this.props.fillings.includes('Black Beans') }
-              onChange={ this.props.handleChange }
+              onChange={ this.props.handleOnChange }
             />
             <img src={ require('../images/fillings/black-beans.png') } height="100px" width="100px" alt="black beans" />
             <label htmlFor="black-beans">Black Beans</label>
@@ -58,7 +60,7 @@ const FillingForm = (props) => {
               value="Pinto Beans"
               name="fillings"
               checked={ this.props.fillings.includes('Pinto Beans') }
-              onChange={ this.props.handleChange }
+              onChange={ this.props.handleOnChange }
             />
             <img src={ require('../images/fillings/pinto-beans.png') } height="100px" width="100px" alt="pinto beans" />
             <label htmlFor="pinto">Pinto Beans</label>
@@ -73,7 +75,7 @@ const FillingForm = (props) => {
               value="Fajita Veggies"
               name="fillings"
               checked={ this.props.fillings.includes('Fajita Veggies') }
-              onChange={ this.props.handleChange }
+              onChange={ this.props.handleOnChange }
             />
             <img src={ require('../images/fillings/fajita-veggies.png') } height="100px" width="100px" alt="fajita veggies" />
             <label htmlFor="veg">Fajita Veggies</label>
@@ -82,6 +84,7 @@ const FillingForm = (props) => {
       </div>
     </Fragment>
   )
+  }
 }
 
 export default FillingForm
